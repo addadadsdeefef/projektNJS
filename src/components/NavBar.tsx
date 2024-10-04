@@ -4,7 +4,7 @@ import * as React from 'react';
 import { BottomNavigation, BottomNavigationAction } from '@mui/material';
 import HomeIcon from '@mui/icons-material/Home';
 import PeopleIcon from '@mui/icons-material/People';
-import PostAddIcon from '@mui/icons-material/AddCircle';
+import AddCircleIcon from '@mui/icons-material/AddCircle';
 import LoginIcon from '@mui/icons-material/Login';
 import HowToRegIcon from '@mui/icons-material/HowToReg';
 import { useRouter } from 'next/navigation';  // Use next/navigation instead of next/router
@@ -40,7 +40,7 @@ const NavBar = () => {
     <BottomNavigation value={value} onChange={handleNavigation} showLabels sx={{ position: 'fixed', bottom: 0, width: '100%' }}>
       <BottomNavigationAction label="Domov" icon={<HomeIcon />} />
       <BottomNavigationAction label="Profily" icon={<PeopleIcon />} />
-      <BottomNavigationAction label="Príspevky" icon={<PostAddIcon />} />
+      <BottomNavigationAction label="Príspevky" icon={<AddCircleIcon />} />
       <BottomNavigationAction label="Prihlásenie" icon={<LoginIcon />} />
       <BottomNavigationAction label="Registrácia" icon={<HowToRegIcon />} />
     </BottomNavigation>
