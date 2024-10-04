@@ -8,3 +8,5 @@ y y n y y n
 npm run dev
 
 cd .. = exit 
+
+SPUSTENIE: npm run dev
