@@ -16,7 +16,5 @@ export default function Home() {
       <NavBar />
     </>
   );
-}
-
-
+} 
 
