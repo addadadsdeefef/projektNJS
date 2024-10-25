@@ -1,21 +1,16 @@
 // src/app/page.tsx
-import NavBar from '../../components/NavBar';
-import Typography from '@mui/material/Typography';
+
+import { getServerSession } from "next-auth";
+import { authOptions } from "../api/auth/[...nextauth]/authOptions";
+import AuthHomeView from "../../sections/AuthHomeView";
+import NonAuthHomeView from "../../sections/NonAuthHomeView";
 
 export const metadata = { title: "Domov | ZoškaSnap" };
 
-export default function Home() {
-  return (
-    <>
-      {/* Main content of the home page */}
-      <Typography variant="h4" component="h1" align="center" sx={{ mt: 4 }}>
-        Domovská Stránka
-      </Typography>
+export default async function HomePage() {
+  // Fetch session on the server
+  const session = await getServerSession(authOptions);
 
-      {/* Bottom Navigation */}
-      <NavBar />
-    </>
-  );
-} 
-
-
+  // Conditionally render authenticated or non-authenticated home view
+  return session ? <AuthHomeView session={session} /> : <NonAuthHomeView />;
+}
