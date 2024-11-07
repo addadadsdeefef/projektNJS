@@ -10,6 +10,7 @@ npm run dev
 cd .. = exit 
 
 SPUSTENIE: npm run dev
+BUILD: nmp run build
 
 
 VS - GIT
